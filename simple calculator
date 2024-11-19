@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+contrnt="width=device-width,initial-
+scale=1.0">
+<title>Document</title>
+<style>
+form{
+width:400px;
+margin=auto;
+border:outset 4pt #133e87;
+padding:5px;
+}
+input{
+margin:5px;
+color:violet;
+background-color:bisque;
+font-size:16pt;
+}
+input[type=button]{
+width:85px;
+border-radius:10px;
+height:50px;
+border:inset 3pt plum;
+}
+input[type=text]{
+width:275px;
+height:50px;
+text-align:right;
+background-color:azure;
+}
+h1{
+color:darkslategey;
+text-align:center;
+}
+footer{
+text-align:center;
+padding:20x;
+letter-spacing:2px;
+color:darkslategrey;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<h1>SIMPLE CALCULATOR</h1>
+<form name="calcform">
+<input type="text" id="answer" name="answer"/>
+<input type="button" value="C" onclick="calcform.answer.value=''"/>
+<br>
+<input type="button" value="1" onclick="calcform.answer.value+='1'"/>
+<input type="button" value="2" onclick="calcform.answer.value+='2'"/>
+<input type="button" value="3" onclick="calcform.answer.value+='3'"/>
+<input type="button" value="+" onclick="calcform.answer.value+='+'"/>
+<br>
+<input type="button" value="4" onclick="calcform.answer.value+='4'"/>
+<input type="button" value="5" onclick="calcform.answer.value+='5'"/>
+<input type="button" value="6" onclick="calcform.answer.value+='6'"/>
+<input type="button" value="-" onclick="calcform.answer.value+='-'"/>
+<br>
+<input type="button" value="7" onclick="calcform.answer.value+='7'"/>
+<input type="button" value="8" onclick="calcform.answer.value+='8'"/>
+<input type="button" value="9" onclick="calcform.answer.value+='9'"/>
+<input type="button" value="*" onclick="calcform.answer.value+='*'"/>
+<br>
+<input type="button" value="/" onclick="calcform.answer.value+='/'"/>
+<input type="button" value="0" onclick="calcform.answer.value+='0'"/>
+<input type="button" value="." onclick="calcform.answer.value+='.'"/>
+<input type="button" value="%" onclick="calcform.answer.value+='%'"/>
+<br>
+<input type="button" value="x2" onclick="squareNumber()"/>
+<input type="button" value="sqrt" onclick="squareRoot()"/>
+<input type="button" value="^" onclick="calcform.answer.value+='**'"/>
+<input type="button" value="=" onclick="calcform.answer.value=eval(calcform.answer.value)"/>
+<br>
+</form>
+<br>
+<footer>
+CHETAN SH |4GM22CS028|Dept of CSE
+</footer>
+<script>
+function squareNumber(){
+let value=calcform.answer.value;
+calcform.answer.value=Math.pow(value,2);
+}
+function squareRoot(){
+let value=calcform.answer.value;
+if(value>=0){
+calcform.answer.value=Math.sqrt(value);
+}
+else{
+calcform.answer.value="Error";
+}
+}
+</script>
+</body>
+</html>
